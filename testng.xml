@@ -3,7 +3,7 @@
     <test name="CucumberTests">
         <classes>
             <!-- We'll create a Cucumber TestNG runner class later named TestNGCucumberRunner -->
-            <class name="runners.TestNGCucumberRunner"/>
+            <class name="com.vaishnavi.nextautomationproject.runners.TestNGCucumberRunner"/>
         </classes>
     </test>
 </suite>
