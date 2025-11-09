@@ -24,12 +24,21 @@ public class SearchSteps {
         homePage.searchFor(product);
     }
 
-    @Then("Search results for {string} should be displayed")
-    public void search_results_should_be_displayed(String product) {
+    @Then("Search results for {string} and {string} should be displayed")
+    public void search_results_should_be_displayed(String product1, String product2) {
         String title = driver.getTitle();
-        Assert.assertTrue(title.toLowerCase().contains(product.toLowerCase()),
-                "Title does not contain search term: " + product);
+        Assert.assertTrue(title.toLowerCase().contains(product1.toLowerCase()),
+                "Title does not contain search term: " + product1);
+        Assert.assertTrue(title.toLowerCase().contains(product2.toLowerCase()),
+                "Title does not contain search term: " + product2);
+    }
+
+    @Then("I select product size {string}")
+    public void selectProductWithSize(String size) throws InterruptedException {
+        homePage.pdpSizeSelect(size);
         DriverFactory.quitDriver();
     }
+
+
 
 }
