@@ -46,7 +46,7 @@ public class SearchSteps {
     @Then("I verify {string} product is added to bag")
     public void verifyProductInBag(String productName) {
         homePage.verifyItemInBag(productName);
-        //DriverFactory.quitDriver();
+        DriverFactory.quitDriver();
     }
 
 }
