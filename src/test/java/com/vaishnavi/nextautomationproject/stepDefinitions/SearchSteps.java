@@ -36,9 +36,17 @@ public class SearchSteps {
     @Then("I select product size {string}")
     public void selectProductWithSize(String size) throws InterruptedException {
         homePage.pdpSizeSelect(size);
-        DriverFactory.quitDriver();
     }
 
+    @Then("I add the product to bag")
+    public void addProductToBag() {
+        homePage.addToBag();
+    }
 
+    @Then("I verify {string} product is added to bag")
+    public void verifyProductInBag(String productName) {
+        homePage.verifyItemInBag(productName);
+        DriverFactory.quitDriver();
+    }
 
 }

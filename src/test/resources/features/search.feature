@@ -8,3 +8,5 @@ Feature: Search on Next website
     When User searches for "W40-428"
     Then Search results for "Love" and "Chiffon Sleeve" should be displayed
     Then I select product size "10"
+    Then I add the product to bag
+    And I verify "Knitted Mini Dress" product is added to bag
