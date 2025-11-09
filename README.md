@@ -1,2 +1,2 @@
-Run this project using the below command 
-mvn clean test
+Run this project using the command 
+"mvn clean test'
