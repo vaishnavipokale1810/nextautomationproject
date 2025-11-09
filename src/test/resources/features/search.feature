@@ -5,5 +5,6 @@ Feature: Search on Next website
 
   Scenario: Search for a product
     Given User is on Next home page
-    When User searches for "dress"
-    Then Search results for "dress" should be displayed
+    When User searches for "W40-428"
+    Then Search results for "Love" and "Chiffon Sleeve" should be displayed
+    Then I select product size "10"
