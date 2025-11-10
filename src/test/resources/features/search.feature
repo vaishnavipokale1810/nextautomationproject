@@ -10,3 +10,5 @@ Feature: Search on Next website
     Then I select product size "10"
     Then I add the product to bag
     And I verify "Knitted Mini Dress" product is added to bag
+    Then I click on checkout button
+    Then I click on Register Now Button

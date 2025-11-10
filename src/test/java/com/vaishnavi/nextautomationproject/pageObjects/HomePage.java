@@ -25,9 +25,8 @@ public class HomePage {
     By addToBagButton = By.cssSelector("button[data-testid='item-form-addToBag-button']");
     By viewBagButton = By.xpath("//a[normalize-space(text())='VIEW BAG']");
     By bagItem = By.cssSelector("div.sbm-item[data-itemnumber='W40428']");
-
-
-
+    By itemCheckout = By.xpath("//*[@id=\"platform_modernisation_header\"]/header/div[1]/nav/div[3]/div[2]/div/div/a");
+    By reg = By.id("registrationBtn");
 
 
     public HomePage(WebDriver driver) {
@@ -152,6 +151,17 @@ public class HomePage {
         System.out.println("Product found in bag: " + productName);
         Assert.assertTrue(productName.contains(itemName), "Product not found in bag!");
 
+    }
+
+    public void checkoutProduct(){
+         WebElement checkoutButton = wait.until(ExpectedConditions.elementToBeClickable(itemCheckout));
+         checkoutButton.click();
+
+    }
+
+    public void registerNow(){
+        WebElement registerButtonClick = wait.until(ExpectedConditions.elementToBeClickable(reg));
+        registerButtonClick.click();
     }
 
 
