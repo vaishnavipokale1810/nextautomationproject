@@ -164,5 +164,4 @@ public class HomePage {
         registerButtonClick.click();
     }
 
-
 }
