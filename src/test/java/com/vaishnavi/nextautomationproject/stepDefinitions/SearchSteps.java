@@ -46,7 +46,17 @@ public class SearchSteps {
     @Then("I verify {string} product is added to bag")
     public void verifyProductInBag(String productName) {
         homePage.verifyItemInBag(productName);
-        DriverFactory.quitDriver();
+        //DriverFactory.quitDriver();
+    }
+
+    @Then("I click on checkout button")
+    public void clickCheckoutButton(){
+        homePage.checkoutProduct();
+    }
+
+    @Then("I click on Register Now Button")
+    public void clickRegister(){
+        homePage.registerNow();
     }
 
 }
